@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" v-model="message"></input>
+            <div>123{{message}}456
+            <div>{{  message  }}</div>
+            <p v-html="message"></p>
+            <p v-text="message"></p>
+        </div>
+        </div>
+        <script type="module">
+            import Vue from './myvue.js';
+            let vm = new Vue({
+                el: '#app',
+                data: {
+                    message: '测试数据',
+                },
+            });
+        </script>
+    </body>
+</html>
